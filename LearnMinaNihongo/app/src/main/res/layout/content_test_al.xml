@@ -12,25 +12,96 @@
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="vn.edu.techkids.learnminanihongo.activity.activity.activity.Activity.TestAlActivity"
     tools:showIn="@layout/activity_test_al">
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:weightSum="3">
-        <Button
+
+        <Spinner
+            android:id="@+id/spinner1"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="2"
-            android:text="Romaji->Hiragana"
-            android:textSize="15sp"
-            android:textAllCaps="false"/>
-        <Button
+            android:textAllCaps="false"
+            android:textSize="15sp" />
+
+        <Spinner
+            android:id="@+id/spinner2"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="seion"
-            android:textSize="15sp"
-            android:textAllCaps="false"/>
+            android:textAllCaps="false"
+            android:textSize="15sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+        android:weightSum="1">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.3">
+
+            <ImageView
+                android:id="@+id/tickTrue"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@mipmap/ic_true" />
+
+            <EditText
+                android:id="@+id/edit_true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="3dp"
+                android:background="@null"
+                android:text="0"
+                android:textSize="20sp" />
+
+            <ImageView
+                android:id="@+id/tickFalse"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="10dp"
+                android:src="@mipmap/check" />
+
+            <EditText
+                android:id="@+id/edit_false"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:layout_marginLeft="3dp"
+                android:text="0"
+                android:textSize="20sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.4">
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.3">
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:text="0/0"
+                android:paddingLeft="60dp"
+                android:textSize="20sp" />
+        </LinearLayout>
 
     </LinearLayout>
 

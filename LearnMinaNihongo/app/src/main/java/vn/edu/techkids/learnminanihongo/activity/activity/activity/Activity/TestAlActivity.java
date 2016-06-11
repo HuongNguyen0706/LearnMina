@@ -2,6 +2,7 @@ package vn.edu.techkids.learnminanihongo.activity.activity.activity.Activity;
 
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.graphics.Canvas;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -11,12 +12,27 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemClickListener;
+import android.widget.ArrayAdapter;
+import android.widget.Spinner;
 import android.widget.Toast;
 
 import vn.edu.techkids.learnminanihongo.R;
 
-public class TestAlActivity extends AppCompatActivity{
-        final CharSequence myList[] = { "05s", "10s", "15s", "20s", "25s", "30s" };
+public class TestAlActivity extends AppCompatActivity {
+    final CharSequence myList[] = {"05s", "10s", "15s", "20s", "25s", "30s"};
+    final String arr1[] = {
+            "Hiragana->Romaji",
+            "Hiragana->Katakana",
+            "Katatana->Romaji",
+            "Katakana->Hiragana",
+            "Romaji->Hiragana",
+            "Romaji->Katakana"
+    };
+    final String arr2[] = {"seion", "dakuon", "youon"};
+    private Spinner spinner1;
+    private Spinner spinner2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,7 +44,33 @@ public class TestAlActivity extends AppCompatActivity{
         getSupportActionBar().setDisplayShowTitleEnabled(true);
         getSupportActionBar().setTitle("Kiem tra bang chu cai");
 
+        spinner1 = (Spinner)findViewById(R.id.spinner1);
+        ArrayAdapter<String> adapter1 = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, arr1);
+        //hien thi danh sach spinner
+        adapter1.setDropDownViewResource(android.R.layout.simple_list_item_single_choice);
+        spinner1.setAdapter(adapter1);
+        spinner1.setOnItemSelectedListener(new MyProcessEvent());
 
+        spinner2 = (Spinner)findViewById(R.id.spinner2);
+        ArrayAdapter<String> adapter2 = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, arr2);
+        //hien thi danh sach spinner
+        adapter2.setDropDownViewResource(android.R.layout.simple_list_item_single_choice);
+        spinner2.setAdapter(adapter2);
+        spinner2.setOnItemSelectedListener(new MyProcessEvent());
+    }
+
+    private class MyProcessEvent implements AdapterView.OnItemSelectedListener {
+
+
+        @Override
+        public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+
+        }
+
+        @Override
+        public void onNothingSelected(AdapterView<?> parent) {
+
+        }
     }
 
     @Override
@@ -36,6 +78,7 @@ public class TestAlActivity extends AppCompatActivity{
         getMenuInflater().inflate(R.menu.menu_test_alphabet, menu);
         return super.onCreateOptionsMenu(menu);
     }
+
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
@@ -66,5 +109,6 @@ public class TestAlActivity extends AppCompatActivity{
         }
         return super.onOptionsItemSelected(item);
     }
+
 
 }
