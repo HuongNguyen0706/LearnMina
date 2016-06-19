@@ -31,13 +31,13 @@
             android:label="@string/title_activity_dialog"
             android:theme="@style/AppTheme" />
         <activity
-            android:name=".activity.activity.activity.Activity.AlphabetActivity"
+            android:name=".activity.activity.activity.Activity.alphabet.AlphabetActivity"
             android:label="@string/title_activity_alphabet"
             android:theme="@style/AppTheme">
 
         </activity>
         <activity
-            android:name=".activity.activity.activity.Activity.TestAlActivity"
+            android:name=".activity.activity.activity.Activity.alphabet.TestAlActivity"
             android:label="@string/title_activity_testal"
             android:theme="@style/AppTheme" />
     </application>
