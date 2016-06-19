@@ -42,7 +42,7 @@ public class TestAlActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowTitleEnabled(true);
-        getSupportActionBar().setTitle("Kiem tra bang chu cai");
+        getSupportActionBar().setTitle("Kiểm tra bảng chữ cái");
 
         spinner1 = (Spinner)findViewById(R.id.spinner1);
         ArrayAdapter<String> adapter1 = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, arr1);
@@ -89,7 +89,7 @@ public class TestAlActivity extends AppCompatActivity {
                 break;
             case R.id.action_timer:
                 final AlertDialog.Builder ad = new AlertDialog.Builder(this);
-                ad.setTitle("Chon thoi gian dem lui");
+                ad.setTitle("Chọn thời gian đếm lùi: ");
                 ad.setSingleChoiceItems(myList, -1, new DialogInterface.OnClickListener() {
 
                     @Override

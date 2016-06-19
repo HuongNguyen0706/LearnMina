@@ -23,7 +23,7 @@ public class AlphabetActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowTitleEnabled(true);
-        getSupportActionBar().setTitle("Bang Chu cai");
+        getSupportActionBar().setTitle("Bảng chữ cái");
 
     }
 
